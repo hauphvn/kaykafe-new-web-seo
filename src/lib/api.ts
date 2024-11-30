@@ -8,12 +8,12 @@ export async function GET() {
         return NextResponse.json(menuItems)
     } catch (error) {
         return NextResponse.json(
-            { error: 'Không thể tải menu' },
+            { error: 'Không thể tải menu' + error?.toString() },
             { status: 500 }
         )
     }
 }
 
-export async function POST() {
-    // Xử lý thêm menu item (nếu cần)
-}
+// export async function POST() {
+//     // Xử lý thêm menu item (nếu cần)
+// }
